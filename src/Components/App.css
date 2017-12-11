@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: #004062;
+  color: #FFF;
+  font-family: "aktiv-grotesk","Helvetica","Arial",sans-serif
+}
+
+header {
+  display: fixed;
+  align-items: center;
+  background-color: #FFF;
+  color: #004062;
+  height: 80px;
+  position: relative;
+}
+
+h1 {
+  margin: 30px 0 10px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.logo {
+  max-width: 50%;
+  display: inline-block;
+  padding: 20px;
+}
+
+.systemTime {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: center;
+}
+
+.operationTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 40px 10px;
+}
+
+.open {
+  color: #5FBA81;
+}
+
+.close {
+  color: #EA7264;
+}
+
+.description {
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  width: 100px;
+  color: #666;
+  background-color: #FFF;
+}
+.online {
+  color: #004062;
+  background-color: #F4CE76;
+}
