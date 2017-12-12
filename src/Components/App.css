@@ -1,21 +1,22 @@
 body {
   margin: 0;
-  background-color: #004062;
-  color: #FFF;
+  background-color: #f5f7f9;
+  color: #004062;
   font-family: "aktiv-grotesk","Helvetica","Arial",sans-serif
 }
 
 header {
-  display: fixed;
-  align-items: center;
+  display: flex;
   background-color: #FFF;
-  color: #004062;
+  color: #2877A0;
   height: 80px;
-  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  margin: 30px 0 10px;
+  font-size: 40px;
+  margin: 0;
 }
 
 h2 {
@@ -24,71 +25,121 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 28px;
   margin: 0;
 }
 
-h6 {
+h4 {
+  font-size: 22px;
   margin: 0;
-  font-size: 13px;
+}
+
+h5 {
+  margin: 0;
+  font-size: 20px;
 }
 
 .logo {
   max-width: 50%;
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
 }
 
-.systemTime {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  margin: 0 20px;
+.logo img {
+  height: 25px;
+}
+
+@keyframes toshow {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 110px);
+  justify-content: flex-start;
+  margin: 15px 0;
+  opacity: 0;
+  animation: toshow 2s ease-out forwards;
+}
+
+.systemTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  margin-top: 130px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0eg)
+  }
+  25% {
+    transform: rotateZ(-15deg)
+  }
+  50% {
+    transform: rotateZ(0deg)
+  }
+  75% {
+    transform: rotateZ(15deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+
+.business {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-width: 0px;
+  border-style: solid;
+  color: white;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  animation: rotate 3s linear 0s infinite;
+}
+
+.business:hover {
+  animation: none;
+}
+
+.time {
+  margin-top: 10px;
+}
+
+.open {
+  background-color: #5FBA81;
+}
+
+.close {
+  background-color: #EA7264;
 }
 
 .operationTime {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
   text-align: center;
-  margin: 40px 10px;
-}
-
-.open {
-  color: #5FBA81;
-}
-
-.close {
-  color: #EA7264;
-}
-
-.description {
-  text-align: center;
-}
-
-.options {
-  display: flex;
+  padding: 0;
+  margin-top: 60px;
   justify-content: center;
+  align-items: center;
 }
 
-button {
-  border: none;
-  border-radius: 5px;
-  margin: 20px;
-  width: 100px;
-  color: #666;
-  background-color: #FFF;
-}
-.online {
+.area-title {
   color: #004062;
-  background-color: #F4CE76;
+  margin-right: 40px;
+}
+
+
+.area-content {
+  color: #777;
 }

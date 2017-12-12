@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import CurrentTime from './CurrentTime.js';
 import OperationTime from './OperationTime.js';
-import System from './System.js'
-import SignUp from './SignUp.js'
 import Logo from '../img/akira_logo.jpg';
 import './App.css';
 
@@ -91,11 +89,14 @@ export default class App extends Component {
           <div className="logo">
             <img src={Logo} alt='logo'/>
           </div>
-          <div className="systemTime">
-            <CurrentTime hour={this.state.systemTime.hour} minute={this.state.systemTime.minute} day={this.state.systemTime.day}/>
-          </div>
         </header>
         <div className="main">
+          
+          <CurrentTime hour={this.state.systemTime.hour}
+            minute={this.state.systemTime.minute}
+            day={this.state.systemTime.day}
+            isOpenForBusiness={this.state.isOpenForBusiness}
+            />
           <OperationTime
             openHour={this.state.openHoursToday.openAt.hour}
             openMinute={this.state.openHoursToday.openAt.minute}
@@ -103,12 +104,7 @@ export default class App extends Component {
             closeHour={this.state.openHoursToday.closeAt.hour}
             closeMinute={this.state.openHoursToday.closeAt.minute}
             closeDay={this.state.openHoursToday.closeAt.day}
-            isOpen={this.state.isOpenForBusiness}
           />
-          <div className="options">
-            <System isOnline={this.state.online}/>
-            <SignUp isSignUp={this.state.directSignupAllowed}/>
-          </div>
         </div>
       </div>
     );
