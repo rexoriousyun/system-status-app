@@ -115,7 +115,8 @@ export default class App extends Component {
           </div>
         </header>
         <div className="main">
-          
+          <div id="snow">
+          </div>
           <CurrentTime hour={this.state.systemTime.hour}
             minute={this.state.systemTime.minute}
             day={this.state.systemTime.day}
