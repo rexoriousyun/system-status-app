@@ -6,7 +6,7 @@ export default class CurrentTime extends Component {
       <div className="systemTime">
         <div className="business">
           <h5>we are</h5>
-          <h2>CLOSED</h2>
+          <h2>{this.props.isOpenForBusiness? 'OPEN' : 'CLOSED'}</h2>
           <h4 className="time">{this.props.hour}{this.props.minute}&nbsp;{this.props.day}</h4>
         </div>
       </div>
